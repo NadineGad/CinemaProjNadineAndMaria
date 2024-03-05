@@ -9,6 +9,7 @@ class RegisterWindow;
 
 class RegisterWindow : public QDialog
 {
+
     Q_OBJECT
 
 public:
@@ -16,7 +17,9 @@ public:
     ~RegisterWindow();
 
 private slots:
-    void on_RegisterPushButton_clicked();
+   void on_RegisterPushButton_clicked();
+
+
 
 private:
     Ui::RegisterWindow *ui;
