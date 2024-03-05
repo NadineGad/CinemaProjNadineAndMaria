@@ -19,6 +19,10 @@ void RegisterWindow::on_RegisterPushButton_clicked()
     hide();
     RegisterWindow *registerwindow = new RegisterWindow();
     registerwindow->show();
+    ui->labelErrorUsername->setVisible(false);
+    ui->labelErrorPass->setVisible(false);
+    ui->labelErrorAge->setVisible(false);
+    ui->labelErrorAllFields->setVisible(false);
 
     QString name = ui->lineEditUsername->text();
     if (*usernames != name)
