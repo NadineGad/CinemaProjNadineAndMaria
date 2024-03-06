@@ -2,12 +2,12 @@
 #include "ui_registerwindow.h"
 #include "Users.h"
 #include "welcomewindow.h"
+#include "loginwindow.h"
 RegisterWindow::RegisterWindow(QWidget *parent, const QString &usernames, int ages)
         : QDialog(parent)
     , ui(new Ui::RegisterWindow)
 {
     ui->setupUi(this);
-    connect(ui->RegisterPushButton, SIGNAL(clicked()), this, SLOT(on_pushButtonRegister_clicked()));
     ui->labelErrorUsername->setVisible(false);
     ui->labelErrorPass->setVisible(false);
     ui->labelErrorAge->setVisible(false);
@@ -22,12 +22,9 @@ RegisterWindow::~RegisterWindow()
 
 void RegisterWindow::on_RegisterPushButton_clicked()
 {
-    hide();
-    RegisterWindow *registerwindow = new RegisterWindow();
-    registerwindow->show();
 
     QString name = ui->lineEditUsername->text();
-    if (*usernames != name)
+    if (*usernames == name)
     {
         ui->labelErrorUsername->setVisible(true);
         return;
@@ -64,7 +61,15 @@ void RegisterWindow::on_RegisterPushButton_clicked()
     bool isRomance =ui->checkBoxRomance->isChecked();
     bool isOther =ui->checkBoxOther->isChecked();
 
-    if(name.isEmpty() || password.isEmpty() || retype.isEmpty() || (!isMaleChecked && !isFemaleChecked) || (!isUser && !isAdmin) || (!isAction && !isDrama && !isComedy && !isHorror && !isRomance && !isOther)|| ui->lineEditDay->text().isEmpty() || ui->lineEditYear->text().isEmpty() || !month.isNull())
+    if (name.isEmpty() ||
+        password.isEmpty() ||
+        retype.isEmpty() ||
+        (!isMaleChecked && !isFemaleChecked) ||
+        (!isUser && !isAdmin) ||
+        (!isAction && !isDrama && !isComedy && !isHorror && !isRomance && !isOther) ||
+        ui->lineEditDay->text().isEmpty() ||
+        ui->lineEditYear->text().isEmpty() ||
+        month.isEmpty())
     {
         ui->labelErrorAllFields->setVisible(true);
         return;

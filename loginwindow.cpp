@@ -47,6 +47,7 @@ void LoginWIndow::on_pushButtonLogin_clicked()
 
 void LoginWIndow::on_pushButtonRegister_clicked(){
     hide();
+    connect(ui->pushButtonRegister, SIGNAL(clicked()), this, SLOT(on_pushButtonRegister_clicked()));
     RegisterWindow *registerWindow = new RegisterWindow(this);
     registerWindow->show();
 }
