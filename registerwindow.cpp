@@ -7,6 +7,12 @@ RegisterWindow::RegisterWindow(QWidget *parent, const QString &usernames, int ag
     , ui(new Ui::RegisterWindow)
 {
     ui->setupUi(this);
+    connect(ui->RegisterPushButton, SIGNAL(clicked()), this, SLOT(on_pushButtonRegister_clicked()));
+    ui->labelErrorUsername->setVisible(false);
+    ui->labelErrorPass->setVisible(false);
+    ui->labelErrorAge->setVisible(false);
+    ui->labelErrorAllFields->setVisible(false);
+
 }
 
 RegisterWindow::~RegisterWindow()
@@ -19,10 +25,6 @@ void RegisterWindow::on_RegisterPushButton_clicked()
     hide();
     RegisterWindow *registerwindow = new RegisterWindow();
     registerwindow->show();
-    ui->labelErrorUsername->setVisible(false);
-    ui->labelErrorPass->setVisible(false);
-    ui->labelErrorAge->setVisible(false);
-    ui->labelErrorAllFields->setVisible(false);
 
     QString name = ui->lineEditUsername->text();
     if (*usernames != name)

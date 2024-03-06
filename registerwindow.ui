@@ -412,45 +412,6 @@
     <string>Register</string>
    </property>
   </widget>
-  <widget class="QLabel" name="labelAlrExisting">
-   <property name="geometry">
-    <rect>
-     <x>450</x>
-     <y>40</y>
-     <width>251</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;*Already Existing&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="labelNotMatching">
-   <property name="geometry">
-    <rect>
-     <x>450</x>
-     <y>150</y>
-     <width>251</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;*Not Matching&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="labelAgeError">
-   <property name="geometry">
-    <rect>
-     <x>450</x>
-     <y>260</y>
-     <width>251</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;*Age is less than 12&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-   </property>
-  </widget>
   <widget class="QLabel" name="labelErrorAllFields">
    <property name="geometry">
     <rect>
@@ -467,8 +428,8 @@
   <widget class="QLabel" name="labelErrorUsername">
    <property name="geometry">
     <rect>
-     <x>70</x>
-     <y>560</y>
+     <x>460</x>
+     <y>40</y>
      <width>161</width>
      <height>16</height>
     </rect>
@@ -480,8 +441,8 @@
   <widget class="QLabel" name="labelErrorPass">
    <property name="geometry">
     <rect>
-     <x>70</x>
-     <y>580</y>
+     <x>460</x>
+     <y>110</y>
      <width>111</width>
      <height>16</height>
     </rect>
@@ -493,8 +454,8 @@
   <widget class="QLabel" name="labelErrorAge">
    <property name="geometry">
     <rect>
-     <x>70</x>
-     <y>600</y>
+     <x>480</x>
+     <y>270</y>
      <width>91</width>
      <height>16</height>
     </rect>
