@@ -24,6 +24,7 @@ void RegisterWindow::on_RegisterPushButton_clicked()
 {
 
     QString name = ui->lineEditUsername->text();
+    usernames[usersCount-1]=name;
     if (*usernames == name)
     {
         ui->labelErrorUsername->setVisible(true);
@@ -32,6 +33,7 @@ void RegisterWindow::on_RegisterPushButton_clicked()
 
 
     QString password = ui->lineEditPass->text();
+     passwords[usersCount-1]=password;
     QString retype = ui->lineEditRetype->text();
         if (password != retype)
     {
@@ -74,13 +76,12 @@ void RegisterWindow::on_RegisterPushButton_clicked()
         ui->labelErrorAllFields->setVisible(true);
         return;
     }
-    usernames->append(name);
-    passwords->append(password);
+
 
     usersCount++;
 
     hide();
-    WelcomeWindow *welcome = new WelcomeWindow(this, name);
+    WelcomeWindow *welcome = new WelcomeWindow(this, name, 2024-year);
     welcome->show();
 }
 
